@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>client</title>
+</head>
+<body>
+  Welcome to 8883 
+  <button onclick="send()">send request to 8881</button>
+</body>
+<script>
+function send() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://127.0.0.1:8881/', true);
+  // 修改默认的 Content-Type ，变为复杂请求
+  xhr.setRequestHeader('Content-Type', 'text/html');
+  // 获取数据后的处理程序
+  xhr.onreadystatechange = function() {};
+  xhr.send();
+}
+</script>
+</html>
